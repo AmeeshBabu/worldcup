@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FIFA World Cup 2026 | Official Platform</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Hanken+Grotesk:wght@300;400;600;700;800;900&amp;family=Sora:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#2d3136",
+                    "primary": "#00d8ff",
+                    "surface-tint": "#14d8ff",
+                    "tertiary-fixed-dim": "#81da91",
+                    "tertiary-fixed": "#9df6ab",
+                    "inverse-primary": "#00687b",
+                    "surface-variant": "#293549",
+                    "tertiary": "#9cf6ab",
+                    "tertiary-container": "#81d991",
+                    "on-surface-variant": "#bbc9ce",
+                    "on-tertiary-container": "#005f29",
+                    "surface-container": "#142032",
+                    "on-tertiary": "#003916",
+                    "error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#005323",
+                    "outline-variant": "#3c494d",
+                    "on-background": "#f5f8ff",
+                    "on-secondary-container": "#b2b5bc",
+                    "on-secondary-fixed": "#181c21",
+                    "inverse-surface": "#d7e3fc",
+                    "surface-container-lowest": "#030e20",
+                    "surface-container-highest": "#293549",
+                    "surface-container-high": "#1e2a3d",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#c3c7cd",
+                    "surface-bright": "#2e3a4d",
+                    "on-primary-fixed-variant": "#004e5d",
+                    "on-primary-container": "#005a6c",
+                    "on-tertiary-fixed": "#00210a",
+                    "on-primary": "#003641",
+                    "on-error": "#690005",
+                    "secondary-fixed": "#dfe2e9",
+                    "background": "#071426",
+                    "on-surface": "#f5f8ff",
+                    "primary-fixed": "#afecff",
+                    "primary-fixed-dim": "#14d8ff",
+                    "secondary-container": "#43474d",
+                    "outline": "#859398",
+                    "secondary": "#c3c7cd",
+                    "primary-container": "#00d8ff",
+                    "surface-container-low": "#0f1c2e",
+                    "on-secondary-fixed-variant": "#43474d",
+                    "surface-dim": "#071426",
+                    "on-primary-fixed": "#001f27",
+                    "error": "#ffb4ab",
+                    "surface": "#071426",
+                    "inverse-on-surface": "#253144"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "80px",
+                    "unit": "8px",
+                    "container-padding-mobile": "20px",
+                    "gutter": "24px",
+                    "container-padding-desktop": "64px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Space Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Space Grotesk"],
+                    "stats-num": ["Sora"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "label-caps": ["Sora"],
+                    "headline-lg-mobile": ["Space Grotesk"],
+                    "display-hero": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "stats-num": ["24px", {"lineHeight": "24px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["40px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-hero": ["120px", {"lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        
+        .glass-panel {
+            background: rgba(20, 32, 50, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 216, 255, 0.1);
+        }
+
+        .glow-cyan {
+            box-shadow: 0 0 20px rgba(0, 216, 255, 0.2);
+        }
+
+        .pulsing-dot {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 216, 255, 0.7); }
+            70% { opacity: 0.5; transform: scale(1.2); box-shadow: 0 0 0 10px rgba(0, 216, 255, 0); }
+            100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 216, 255, 0); }
+        }
+
+        .parallax-bg {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.1s ease-out;
+        }
+
+        #hero-frame-1 {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAg9nK2zfNMYuWIZh1stTzUyafZO2H4o5PoIgnCuw4UjgYwNLX6-Fzi4sI7T7wMjgkRcqq7VoqQwOuCgCgJV0LtSYHI-LSUYh5_wzFTxu5PVKrmm6J-IaV6ELzqJ306DjP7Br1qfgNzBokmozO3CRppNrvhJYsdOIDE4tHKmHd86v_MviR6-NUkiBF6gbmiAHcB9TgiFe3Z7cv18Yf_2FL-FzEFEYrqjnV2sWOgcBZZfHVGyzLPN0eKLb6dXVnh2LTDCH3vTO4H4Fw');
+            z-index: 10;
+        }
+
+        #hero-frame-2 {
+            background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcaleaVb88ayrnYLqjKfN-qmJlfoqf4_ptnVekTXKlZlFxgAEwNdU6oyrrnDqOW0I6msJ8c7d4Slug6V66jrTvbX5uqmCibQ8iiS9ojfXPgGlf0kxy3z3zXfvIgV0YlBJVbWcdMTyvsKlBjHR1mEN6doahxDXkR8VjFWhrX_wM8C_bbXBJUhez9YGIvr49SNShGdrk4ED-5_mxyEbGaUsNDJ-x7utWEECBBENmLBXhx07_siVtxbqAsZ_07H4zOtiTN7j0XBrZmZ0');
+            opacity: 0;
+            z-index: 11;
+        }
+
+        .scrolling-ticker {
+            animation: ticker 30s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .float-particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #00d8ff;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+
+        /* Technical Grid Overlay */
+        .tech-grid {
+            background-image: radial-gradient(rgba(0, 216, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Motion utility classes */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(0, 216, 255, 0.15);
+        }
+        .progress-bar-fill {
+            transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-background overflow-x-hidden">
+<!-- Sticky Navigation -->
+<nav class="fixed top-0 w-full z-50 h-20 flex justify-between items-center px-container-padding-desktop max-w-full mx-auto bg-background/20 backdrop-blur-3xl border-b border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)]">
+<div class="flex items-center gap-12">
+<span class="font-headline-md text-headline-md font-bold text-primary tracking-tight">FIFA World Cup 2026</span>
+<div class="hidden md:flex gap-8">
+<a class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1 hover:text-primary hover:scale-105 transition-all active:scale-95 duration-200 uppercase tracking-widest text-sm" href="#">Matches</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:scale-105 transition-all active:scale-95 duration-200 uppercase tracking-widest text-sm" href="#">Schedule</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:scale-105 transition-all active:scale-95 duration-200 uppercase tracking-widest text-sm" href="#">Teams</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:scale-105 transition-all active:scale-95 duration-200 uppercase tracking-widest text-sm" href="#">Live Scores</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:scale-105 transition-all active:scale-95 duration-200 uppercase tracking-widest text-sm" href="#">Favorites</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:scale-105 transition-all active:scale-95 duration-200 uppercase tracking-widest text-sm" href="#">Standings</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">search</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">notifications</button>
+</div>
+</nav>
+<!-- Fullscreen Hero Section -->
+<main class="relative w-full h-[300vh]" id="hero-main">
+<!-- Fixed Viewport for Animation -->
+<div class="sticky top-0 h-screen w-full overflow-hidden bg-black">
+<!-- Background Animation Frames -->
+<div class="absolute inset-0 bg-cover bg-center transition-opacity duration-700" id="hero-frame-1"></div>
+<div class="absolute inset-0 bg-cover bg-center transition-opacity duration-700" id="hero-frame-2"></div>
+<!-- Cinematic Overlays -->
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/20 z-20"></div>
+<div class="absolute inset-0 tech-grid z-20 pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-radial-gradient from-primary/10 to-transparent blur-3xl z-20 pointer-events-none opacity-50" id="glow-effect"></div>
+<!-- Floating Particles Container -->
+<div class="absolute inset-0 z-20 pointer-events-none" id="particles"></div>
+<!-- Hero Content Canvas -->
+<div class="relative z-30 h-full flex flex-col justify-center px-container-padding-desktop">
+<!-- Main Headlines -->
+<div class="max-w-6xl mt-20" id="hero-text-trigger">
+<h1 class="font-display-hero text-display-hero font-extrabold uppercase leading-none tracking-tighter text-white drop-shadow-2xl">
+                        WORLD CUP <br/>
+<span class="text-primary italic">2026</span>
+</h1>
+<p class="font-headline-md text-headline-md text-primary mt-6 tracking-[0.2em] uppercase transition-all duration-1000 opacity-0 translate-y-10" id="hero-subtext">
+                        Every Match. Every Team. Every Moment.
+                    </p>
+</div>
+<!-- Live Stats Floating Row -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mt-16 max-w-5xl">
+<div class="glass-panel p-6 rounded-lg glow-cyan flex flex-col gap-1 hover-lift">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Participating Teams</span>
+<div class="flex items-center gap-2">
+<span class="font-stats-num text-stats-num text-primary" data-count="48">0</span>
+<span class="font-body-md text-body-md text-white/80">Nations</span>
+</div>
+</div>
+<div class="glass-panel p-6 rounded-lg glow-cyan flex flex-col gap-1 hover-lift">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Global Fixtures</span>
+<div class="flex items-center gap-2">
+<span class="font-stats-num text-stats-num text-primary" data-count="104">0</span>
+<span class="font-body-md text-body-md text-white/80">Matches</span>
+</div>
+</div>
+<div class="glass-panel p-6 rounded-lg glow-cyan flex flex-col gap-1 hover-lift">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Major Host Cities</span>
+<div class="flex items-center gap-2">
+<span class="font-stats-num text-stats-num text-primary" data-count="16">0</span>
+<span class="font-body-md text-body-md text-white/80">Arenas</span>
+</div>
+</div>
+<div class="glass-panel p-6 rounded-lg glow-cyan flex flex-col gap-1 border-primary/50 hover-lift">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">The Prize</span>
+<div class="flex items-center gap-2">
+<span class="font-stats-num text-stats-num text-primary">1</span>
+<span class="font-body-md text-body-md text-white/80">Champion</span>
+</div>
+</div>
+</div>
+<!-- CTA Cluster -->
+<div class="flex flex-wrap gap-6 mt-16">
+<button class="bg-primary text-background font-body-lg text-body-lg font-bold px-10 py-5 rounded-lg flex items-center gap-3 hover:scale-105 hover:bg-white shadow-[0_0_30px_rgba(0,216,255,0.4)] transition-all active:scale-95 group uppercase tracking-widest">
+<span>EXPERIENCE NOW</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1">play_circle</span>
+</button>
+<button class="glass-panel text-white font-body-lg text-body-lg font-bold px-10 py-5 rounded-lg border border-white/20 hover:border-primary hover:text-primary transition-all active:scale-95 uppercase tracking-widest">
+                        MATCH CENTER
+                    </button>
+</div>
+</div>
+<!-- Floating Side Widgets -->
+<div class="absolute right-container-padding-desktop top-1/2 -translate-y-1/2 z-30 hidden xl:flex flex-col gap-4">
+<div class="glass-panel p-4 rounded-lg w-64 flex flex-col gap-3 group hover-lift">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-primary uppercase">Venue Insight</span>
+<span class="material-symbols-outlined text-[16px] text-primary">stadium</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-lg text-body-lg font-bold text-white">Estadio Azteca</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm">Capacity: 87,523</span>
+</div>
+<div class="h-[1px] bg-white/10 w-full"></div>
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[18px]">partly_cloudy_day</span>
+<span class="font-body-md text-body-md text-sm">22°C - Ideal</span>
+</div>
+</div>
+<div class="glass-panel p-4 rounded-lg w-64 flex flex-col gap-3 group hover-lift">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-primary uppercase">LIVE BROADCAST</span>
+<div class="flex items-center gap-1">
+<div class="w-2 h-2 bg-primary rounded-full pulsing-dot"></div>
+<span class="font-label-caps text-[10px] text-primary">ON-AIR</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-body-lg text-body-lg font-bold text-white">Pre-Match Show</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm">Streaming 4K HDR</span>
+</div>
+</div>
+</div>
+<!-- Bottom Score Ticker -->
+<div class="absolute bottom-0 w-full h-12 glass-panel border-x-0 border-b-0 z-40 overflow-hidden flex items-center">
+<div class="scrolling-ticker whitespace-nowrap flex items-center gap-12 font-label-caps text-label-caps text-white/70">
+<span class="flex items-center gap-4"> <span class="text-primary font-bold">GROUP A</span> MEX 2-1 USA </span>
+<span class="w-[1px] h-4 bg-white/20"></span>
+<span class="flex items-center gap-4"> <span class="text-primary font-bold">GROUP B</span> ENG 4-0 IRN </span>
+<span class="w-[1px] h-4 bg-white/20"></span>
+<span class="flex items-center gap-4"> <span class="text-primary font-bold">LIVE</span> BRA 1-1 JPN </span>
+<span class="w-[1px] h-4 bg-white/20"></span>
+<span class="flex items-center gap-4"> <span class="text-primary font-bold">GROUP C</span> ARG 3-1 KSA </span>
+<span class="w-[1px] h-4 bg-white/20"></span>
+<span class="flex items-center gap-4"> <span class="text-primary font-bold">GROUP D</span> FRA 2-0 AUS </span>
+<span class="w-[1px] h-4 bg-white/20"></span>
+<span class="flex items-center gap-4"> <span class="text-primary font-bold">GROUP A</span> MEX 2-1 USA </span>
+</div>
+</div>
+</div>
+</main>
+<!-- SECTION 1 — MATCH COMMAND CENTER -->
+<section class="w-full bg-background relative z-40 pt-20 pb-section-gap px-container-padding-desktop border-t border-white/10">
+<div class="max-w-7xl mx-auto reveal-on-scroll">
+<div class="flex justify-between items-end mb-8">
+<h2 class="font-headline-lg text-headline-lg font-bold text-white uppercase tracking-tight">Match Command <span class="text-primary">Center</span></h2>
+<button class="text-primary font-label-caps text-label-caps flex items-center gap-1 hover:text-white transition-colors uppercase tracking-widest">
+                View Full Schedule <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Date Tabs -->
+<div class="flex gap-4 overflow-x-auto hide-scrollbar pb-4 mb-6">
+<button class="glass-panel px-6 py-3 rounded-full border-primary text-primary font-label-caps text-label-caps whitespace-nowrap bg-primary/10">TODAY</button>
+<button class="glass-panel px-6 py-3 rounded-full text-white/70 hover:text-white hover:border-white/30 font-label-caps text-label-caps whitespace-nowrap transition-all">JUN 12</button>
+<button class="glass-panel px-6 py-3 rounded-full text-white/70 hover:text-white hover:border-white/30 font-label-caps text-label-caps whitespace-nowrap transition-all">JUN 13</button>
+<button class="glass-panel px-6 py-3 rounded-full text-white/70 hover:text-white hover:border-white/30 font-label-caps text-label-caps whitespace-nowrap transition-all">JUN 14</button>
+<button class="glass-panel px-6 py-3 rounded-full text-white/70 hover:text-white hover:border-white/30 font-label-caps text-label-caps whitespace-nowrap transition-all">JUN 15</button>
+<button class="glass-panel px-6 py-3 rounded-full text-white/70 hover:text-white hover:border-white/30 font-label-caps text-label-caps whitespace-nowrap transition-all">JUN 16</button>
+</div>
+<!-- Match Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Live Match Card -->
+<div class="glass-panel rounded-xl p-6 relative overflow-hidden group hover-lift border-primary/40 shadow-[0_0_20px_rgba(0,216,255,0.1)]">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+<div class="flex justify-between items-center mb-6">
+<span class="font-label-caps text-[10px] text-white/60 uppercase tracking-widest bg-white/5 px-2 py-1 rounded">Group A</span>
+<div class="flex items-center gap-2 bg-primary/10 px-3 py-1 rounded-full">
+<div class="w-2 h-2 bg-primary rounded-full pulsing-dot"></div>
+<span class="font-label-caps text-[10px] text-primary uppercase font-bold tracking-widest">Live 65'</span>
+</div>
+</div>
+<div class="flex justify-between items-center mb-6">
+<div class="flex flex-col items-center gap-2 w-1/3">
+<img alt="Mexico" class="w-12 h-8 object-cover rounded-sm shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADFy_y9SvBl3N8H99uVIOR0oJV9E_QIqg0pIt4lBuVNXTsDnZR5TWH7H-0NIGo3RrF97yeIQyiO2HO2DJDHXVDjosdQHMNDhG2o41GOlgP-D6LF0IUfEcSsS7xHMRa706FxzY3Zg0ha1d8fg2tmN8XzPawSbc8YtemlhG3zOJR9eoDTwh5s04bEYmgURxU3x3eIgS8Au9bMuL2iK1TaTx0KyxZpIMaDqXgrZR_GjsRGhn-SzegKIowCNGHnzcsP9SiwlMvlYHY-Ec"/>
+<span class="font-body-lg text-body-lg font-bold text-white uppercase text-center leading-tight">MEX</span>
+</div>
+<div class="flex flex-col items-center justify-center w-1/3">
+<div class="font-headline-md text-[32px] font-bold text-primary tracking-tighter flex gap-3">
+<span>2</span> <span class="text-white/30">-</span> <span>1</span>
+</div>
+</div>
+<div class="flex flex-col items-center gap-2 w-1/3">
+<img alt="USA" class="w-12 h-8 object-cover rounded-sm shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGg7ix5i5EksZ0PSVPVWGxB9lKb5lF6EpuchlLye_xqZeCWWXGBy0sKI2rAiobx4gwlFSfKOuaFcaZO1MGOOuIJPGpbtqUihijl493lR_qKAKVojIMG3tzamiIAlMHJo2HpeIqqwSONB2vTw22TKsSVki3CfjjXfVf56M8iPty82M77W_8t4N0QKygJ9xEMqFG9OxCfXPT13C8ygg2BOCOrGDigX6zxIkppkUXBoUoCg9t2qppyOq00cwkl0oLA9bPtqEv3rr-AeY"/>
+<span class="font-body-lg text-body-lg font-bold text-white uppercase text-center leading-tight">USA</span>
+</div>
+</div>
+<div class="h-[1px] w-full bg-gradient-to-r from-transparent via-white/10 to-transparent mb-4"></div>
+<div class="flex justify-between items-center text-sm font-body-md text-white/60">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">stadium</span> Estadio Azteca</span>
+<span>Mexico City</span>
+</div>
+</div>
+<!-- Upcoming Match Card -->
+<div class="glass-panel rounded-xl p-6 relative overflow-hidden group hover-lift">
+<div class="flex justify-between items-center mb-6">
+<span class="font-label-caps text-[10px] text-white/60 uppercase tracking-widest bg-white/5 px-2 py-1 rounded">Group B</span>
+<span class="font-label-caps text-[10px] text-white/80 uppercase tracking-widest">21:30 IST</span>
+</div>
+<div class="flex justify-between items-center mb-6 opacity-80 group-hover:opacity-100 transition-opacity">
+<div class="flex flex-col items-center gap-2 w-1/3">
+<img alt="England" class="w-12 h-8 object-cover rounded-sm shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYV8Ik8eMCmbzMmYRZmJtnwYx3X-Pw66rSAtqjQsKFyMSeKr_rZsA0F9QB09t7gN_KcjHJjT5jzjmPcRCF8Jr5YLd5RzvUB9ARTgLcCjPXAxN0H0PEBel4gVB4l31TkZ586BxO_smuvjQzmrB-5axQhpshs6Ut2m1alTnNYMbXI1k8F9OMZ_8anqnQcZguJvfUu6TWSVa53WPc6EwfquYgsjbbAH1cgYurEGbqchvUxYImhH7iPdot0BCioTB_br6HcI4eu4d3IN0"/>
+<span class="font-body-lg text-body-lg font-bold text-white uppercase text-center leading-tight">ENG</span>
+</div>
+<div class="flex flex-col items-center justify-center w-1/3">
+<div class="font-headline-md text-2xl font-bold text-white/50 tracking-tighter">VS</div>
+</div>
+<div class="flex flex-col items-center gap-2 w-1/3">
+<img alt="USA" class="w-12 h-8 object-cover rounded-sm shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbkoaP7XLdtziDH0s4OR5ANkUGvZKlUrmBDxKW_4pVs9HxY-94PD98k1sei_f-AdHfFZigLSHpUfIY8fNdyovday4BhdL8ji5DXmwG6-GgneUeGPD1NIfUiBRXxaAkJCLR6WMBHfffD1C-66l5Xd_A6r0i7eVGtq10tG24vk-lt7vtXXBEsAzBZkPhwhhmE5x_azyXOxuDXjfj1f1Ghq1JcOd_CEK4IGM3d2wJURoN0TOd1wo_cprISZDM-HENEdc2l5K6KAR0zew"/>
+<span class="font-body-lg text-body-lg font-bold text-white uppercase text-center leading-tight">USA</span>
+</div>
+</div>
+<div class="h-[1px] w-full bg-gradient-to-r from-transparent via-white/10 to-transparent mb-4"></div>
+<div class="flex justify-between items-center text-sm font-body-md text-white/60">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">stadium</span> MetLife Stadium</span>
+<span>New York</span>
+</div>
+</div>
+<!-- Upcoming Match Card -->
+<div class="glass-panel rounded-xl p-6 relative overflow-hidden group hover-lift">
+<div class="flex justify-between items-center mb-6">
+<span class="font-label-caps text-[10px] text-white/60 uppercase tracking-widest bg-white/5 px-2 py-1 rounded">Group C</span>
+<span class="font-label-caps text-[10px] text-white/80 uppercase tracking-widest">00:30 IST</span>
+</div>
+<div class="flex justify-between items-center mb-6 opacity-80 group-hover:opacity-100 transition-opacity">
+<div class="flex flex-col items-center gap-2 w-1/3">
+<img alt="Argentina" class="w-12 h-8 object-cover rounded-sm shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeUKZizgokPboMlUoCjw81ZiEBhgf12wc9Xodxw1C_V4mNcWf9bZp8bdKgpfVSg1SvtBwK9LbeaObqPElodxadMhrxdg_9u2IF6YuiaX8M36trYn3XyTo8CLhRYvMqCAgZLa_e0wp90Ex__TTerDgLi7wmjF92w9sJ2iSaqUL6U1-Vbq1lzwIXrkJv7C5Zkf3RU9Bnys9oGD8lVBCYzyH1erDWxJzv5BZxf6adHSTbyrugj32ujemcoXW0Lm1W6RZJIRY82p01PSE"/>
+<span class="font-body-lg text-body-lg font-bold text-white uppercase text-center leading-tight">ARG</span>
+</div>
+<div class="flex flex-col items-center justify-center w-1/3">
+<div class="font-headline-md text-2xl font-bold text-white/50 tracking-tighter">VS</div>
+</div>
+<div class="flex flex-col items-center gap-2 w-1/3">
+<img alt="Saudi Arabia" class="w-12 h-8 object-cover rounded-sm shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqF9qdrtDcx3vC1Fpew9Y4Kq9c7JgA0V2nfwz54ozgD4YwFnD8bnW0sE2fZ4n_cEudgO6lNchdvbw2H3HCOpFsFwey3QQq2fSf1Xi84iyqTU4I0XZW3XDlKCJBLBuFlDwQrDpVee1CtRq4CGfDv5PJ5ZfABzznC7gEw60cCrx56fyUD51zITO5dZ2JGi5xq10iWRIhJ9A5AwH_AYiQ-1Iv0ttmWzV9BwflGSdLPuDEVA83vRt36VmpexzisQRyw1YppyNOMDbCBEc"/>
+<span class="font-body-lg text-body-lg font-bold text-white uppercase text-center leading-tight">KSA</span>
+</div>
+</div>
+<div class="h-[1px] w-full bg-gradient-to-r from-transparent via-white/10 to-transparent mb-4"></div>
+<div class="flex justify-between items-center text-sm font-body-md text-white/60">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">stadium</span> AT&amp;T Stadium</span>
+<span>Dallas</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2 — LIVE MATCH EXPERIENCE -->
+<section class="w-full bg-surface-container-low relative z-40 py-section-gap px-container-padding-desktop border-t border-white/5">
+<div class="max-w-7xl mx-auto reveal-on-scroll">
+<h2 class="font-headline-lg text-headline-lg font-bold text-white uppercase tracking-tight mb-8">Live Match <span class="text-primary">Experience</span></h2>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Main Broadcast Area -->
+<div class="lg:col-span-2 glass-panel rounded-xl overflow-hidden relative group">
+<div class="aspect-video bg-black relative">
+<img alt="Live Match" class="w-full h-full object-cover opacity-80 mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7tBnf-JiJ2PuNFN9_klZqekKG8xwBR2I4MpZb1ZyJC4DaSTwfZfjQ1b4-HiCk59CwICjaDNf4OEQTvSSk7l3jXke9fd2TEsRVAE7OKIFLVblN3Mninp70S2IOO5qRqdRvCqYyAgYDfHWnEX3F3ZNa0YfhI1DMeujKXVIZeJSGNRFHlE6BI4bzbpuU7I9MXuVaMkgJzZWghH6Po5FOv1v5uC31ASHKYDY_Jq1PdLUoTcQ3zfy42xjMMeouRJAqqK0YA671e5Yh9no"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<!-- Broadcast Overlay -->
+<div class="absolute top-4 left-4 flex gap-2">
+<div class="bg-black/80 backdrop-blur text-white px-3 py-1 rounded flex items-center gap-2 font-label-caps text-xs border border-white/10">
+<span class="text-primary">MEX</span> 2 - 1 <span class="text-white/60">USA</span>
+</div>
+<div class="bg-primary text-black px-3 py-1 rounded flex items-center gap-2 font-label-caps text-xs font-bold">
+                            65:23
+                        </div>
+</div>
+<button class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-primary/20 backdrop-blur rounded-full flex items-center justify-center border border-primary/50 text-primary hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Stats Dashboard -->
+<div class="glass-panel rounded-xl p-6 flex flex-col gap-6">
+<h3 class="font-label-caps text-label-caps text-white/60 uppercase tracking-widest border-b border-white/10 pb-2">Match Telemetry</h3>
+<!-- Possession -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between font-label-caps text-xs text-white">
+<span>MEX <span class="text-primary font-bold">58%</span></span>
+<span class="text-white/60">Possession</span>
+<span><span class="text-white/80 font-bold">42%</span> USA</span>
+</div>
+<div class="w-full h-2 bg-white/10 rounded-full overflow-hidden flex">
+<div class="h-full bg-primary w-[58%] progress-bar-fill"></div>
+<div class="h-full bg-white/30 w-[42%] progress-bar-fill"></div>
+</div>
+</div>
+<!-- Shots -->
+<div class="flex justify-between items-center py-2 border-b border-white/5">
+<span class="font-stats-num text-xl text-primary">14</span>
+<span class="font-label-caps text-xs text-white/60 uppercase tracking-widest">Shots</span>
+<span class="font-stats-num text-xl text-white/80">8</span>
+</div>
+<!-- xG -->
+<div class="flex justify-between items-center py-2 border-b border-white/5">
+<span class="font-stats-num text-xl text-primary">2.1</span>
+<span class="font-label-caps text-xs text-white/60 uppercase tracking-widest">Expected Goals (xG)</span>
+<span class="font-stats-num text-xl text-white/80">0.8</span>
+</div>
+<!-- Corners & Cards -->
+<div class="grid grid-cols-2 gap-4 mt-auto">
+<div class="bg-white/5 rounded p-3 text-center">
+<span class="block font-label-caps text-[10px] text-white/60 uppercase mb-1">Corners</span>
+<div class="font-stats-num text-lg text-white">6 - 3</div>
+</div>
+<div class="bg-white/5 rounded p-3 text-center flex justify-center gap-4">
+<div class="flex flex-col items-center">
+<div class="w-3 h-4 bg-red-500 rounded-sm mb-1 shadow-[0_0_5px_rgba(239,68,68,0.5)]"></div>
+<span class="font-stats-num text-sm text-white">2 - 1</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Component -->
+<footer class="w-full bg-surface-container-lowest border-t border-white/5 grid grid-cols-1 md:grid-cols-3 gap-gutter px-container-padding-desktop py-section-gap relative z-40">
+<div class="flex flex-col gap-6">
+<span class="font-headline-md text-headline-md text-primary font-bold tracking-tight">FIFA World Cup 2026</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Experience the world's greatest sporting event on our premium digital platform. Exclusive coverage, real-time telemetry, and high-performance analytics.</p>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-label-caps text-label-caps text-white uppercase tracking-widest">Navigation</h4>
+<ul class="flex flex-col gap-3 font-body-md text-body-md text-on-surface-variant">
+<li class="hover:text-primary transition-colors cursor-pointer">Tournament Overview</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Digital Ticketing</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Broadcasting Partners</li>
+<li class="hover:text-primary transition-colors cursor-pointer">Fanzone VR Experience</li>
+</ul>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-label-caps text-label-caps text-white uppercase tracking-widest">Connect</h4>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full glass-panel flex items-center justify-center hover:bg-primary hover:text-background transition-all">
+<span class="material-symbols-outlined">share</span>
+</button>
+<button class="w-12 h-12 rounded-full glass-panel flex items-center justify-center hover:bg-primary hover:text-background transition-all">
+<span class="material-symbols-outlined">language</span>
+</button>
+<button class="w-12 h-12 rounded-full glass-panel flex items-center justify-center hover:bg-primary hover:text-background transition-all">
+<span class="material-symbols-outlined">chat</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">© 2026 FIFA World Cup. All Rights Reserved. Official Global Broadcast Platform.</p>
+</div>
+</footer>
+<script>
+        // Scroll Reveal Logic
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach((elem) => {
+            observer.observe(elem);
+        });
+
+        // Hero Animation Logic
+        const frame1 = document.getElementById('hero-frame-1');
+        const frame2 = document.getElementById('hero-frame-2');
+        const subtext = document.getElementById('hero-subtext');
+        const main = document.getElementById('hero-main');
+        const counters = document.querySelectorAll('[data-count]');
+
+        // Particle generation
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 50; i++) {
+            const p = document.createElement('div');
+            p.className = 'float-particle';
+            p.style.left = `${Math.random() * 100}%`;
+            p.style.top = `${Math.random() * 100}%`;
+            p.style.animation = `float ${5 + Math.random() * 10}s linear infinite`;
+            p.style.opacity = Math.random() * 0.5;
+            particlesContainer.appendChild(p);
+        }
+
+        // Interaction Scroll Effect
+        window.addEventListener('scroll', () => {
+            const scrollPercent = window.scrollY / (main.offsetHeight - window.innerHeight);
+            
+            // Frame Cross-Fade (Goal/Strike animation)
+            if (scrollPercent < 0.5) {
+                frame1.style.opacity = 1;
+                frame2.style.opacity = scrollPercent * 2;
+            } else {
+                frame1.style.opacity = 1 - ((scrollPercent - 0.5) * 2);
+                frame2.style.opacity = 1;
+            }
+
+            // Text Animations
+            if (scrollPercent > 0.1) {
+                subtext.classList.remove('opacity-0', 'translate-y-10');
+                subtext.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                subtext.classList.add('opacity-0', 'translate-y-10');
+                subtext.classList.remove('opacity-100', 'translate-y-0');
+            }
+
+            // Stat Counter Trigger
+            if (scrollPercent > 0.05) {
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-count');
+                    const current = +counter.innerText;
+                    const increment = target / 50;
+                    if (current < target) {
+                        counter.innerText = Math.ceil(current + increment);
+                    } else {
+                        counter.innerText = target;
+                    }
+                });
+            }
+        });
+
+        // Mouse Parallax for Atmosphere
+        window.addEventListener('mousemove', (e) => {
+            const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+            const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+            
+            frame1.style.transform = `scale(1.05) translate(${moveX}px, ${moveY}px)`;
+            frame2.style.transform = `scale(1.05) translate(${moveX}px, ${moveY}px)`;
+            
+            const glow = document.getElementById('glow-effect');
+            glow.style.transform = `translate(${-50 + moveX * 2}%, ${-50 + moveY * 2}%)`;
+        });
+    </script>
+</body></html>
